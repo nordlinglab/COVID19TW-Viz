@@ -42,7 +42,7 @@ def clean_taiwan_data(taiwan_data_sheet, start_index=1, end_index=579):
 def add_asymptomatic_date(data):
     confirm_date = data.confirmed_date
     symptom_onset_date = data.onset_of_symptom
-    infection_date = data.infection_date
+    infection_date = data.earliest_infection_date
     source_id = data.source_infected_case
     source_id = source_id.str.replace('ID ', '')
     asymptomatic_date = pd.DataFrame(
