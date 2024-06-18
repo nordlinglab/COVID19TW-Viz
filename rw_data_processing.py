@@ -99,9 +99,9 @@ def generate_taiwan_contact_network(data):
     contact_type_start_index = data.columns.get_loc('couple')
     contact_type_end_index = data.columns.get_loc('other_unknown_contact')
     uninfected_contact_type_start_index = data.columns.get_loc(
-        'number_of_uninfected_contact_travel')
+        'number_of_uninfected_contacts_travel')
     uninfected_contact_type_end_index = data.columns.get_loc(
-        'number_of_uninfected_contact_friend')
+        'number_of_uninfected_contacts_friend')
 
     # Construct contact type label
     contact_type_dict = {}
@@ -111,24 +111,24 @@ def generate_taiwan_contact_network(data):
     contact_type_dict = bidict(contact_type_dict)
     contact_type_final_index = contact_type_dict['other_unknown_contact']
     # Add uninfected contact type
-    uninfected_contact_type_dict['number_of_uninfected_contact_travel'] = contact_type_dict['travel_together']
-    uninfected_contact_type_dict['number_of_uninfected_contact_flight'] = contact_type_dict['the_same_flight']
-    uninfected_contact_type_dict['number_of_uninfected_contact_flight_nearby_seats'] = contact_type_dict['the_same_flight_nearby_seat']
-    uninfected_contact_type_dict['number_of_uninfected_contact_car'] = contact_type_dict['the_same_car']
+    uninfected_contact_type_dict['number_of_uninfected_contacts_travel'] = contact_type_dict['travel_together']
+    uninfected_contact_type_dict['number_of_uninfected_contacts_flight'] = contact_type_dict['the_same_flight']
+    uninfected_contact_type_dict['number_of_uninfected_contacts_flight_nearby_seats'] = contact_type_dict['the_same_flight_nearby_seat']
+    uninfected_contact_type_dict['number_of_uninfected_contacts_car'] = contact_type_dict['the_same_car']
     # New label
-    uninfected_contact_type_dict['number_of_uninfected_contact_ship'] = contact_type_final_index + 1
+    uninfected_contact_type_dict['number_of_uninfected_contacts_ship'] = contact_type_final_index + 1
     contact_type_final_index += 1
-    uninfected_contact_type_dict['number_of_uninfected_contact_live_together'] = contact_type_dict['live_together']
-    uninfected_contact_type_dict['number_of_uninfected_contact_family'] = contact_type_dict['family']
-    uninfected_contact_type_dict['number_of_uninfected_contact_coworker'] = contact_type_dict['coworker']
-    uninfected_contact_type_dict['number_of_uninfected_contact_others'] = contact_type_dict['other_unknown_contact']
-    uninfected_contact_type_dict['number_of_uninfected_contact_hospital'] = contact_type_dict['the_same_hospital']
-    uninfected_contact_type_dict['number_of_uninfected_contact_quarantine_hotel'] = contact_type_dict['the_same_quarantine_hotel']
-    uninfected_contact_type_dict['number_of_uninfected_contact_hotel'] = contact_type_dict['the_same_hotel']
-    uninfected_contact_type_dict['number_of_uninfected_contact_school'] = contact_type_dict['the_same_school']
-    uninfected_contact_type_dict['number_of_uninfected_contact_couple'] = contact_type_dict['couple']
-    uninfected_contact_type_dict['number_of_uninfected_contact_panshi'] = contact_type_dict['panshi_fast_combat_support_ship']
-    uninfected_contact_type_dict['number_of_uninfected_contact_friend'] = contact_type_dict['friend']
+    uninfected_contact_type_dict['number_of_uninfected_contacts_live_together'] = contact_type_dict['live_together']
+    uninfected_contact_type_dict['number_of_uninfected_contacts_family'] = contact_type_dict['family']
+    uninfected_contact_type_dict['number_of_uninfected_contacts_coworker'] = contact_type_dict['coworker']
+    uninfected_contact_type_dict['number_of_uninfected_contacts_others'] = contact_type_dict['other_unknown_contact']
+    uninfected_contact_type_dict['number_of_uninfected_contacts_hospital'] = contact_type_dict['the_same_hospital']
+    uninfected_contact_type_dict['number_of_uninfected_contacts_quarantine_hotel'] = contact_type_dict['the_same_quarantine_hotel']
+    uninfected_contact_type_dict['number_of_uninfected_contacts_hotel'] = contact_type_dict['the_same_hotel']
+    uninfected_contact_type_dict['number_of_uninfected_contacts_school'] = contact_type_dict['the_same_school']
+    uninfected_contact_type_dict['number_of_uninfected_contacts_couple'] = contact_type_dict['couple']
+    uninfected_contact_type_dict['number_of_uninfected_contacts_panshi'] = contact_type_dict['panshi_fast_combat_support_ship']
+    uninfected_contact_type_dict['number_of_uninfected_contacts_friend'] = contact_type_dict['friend']
     uninfected_contact_type_dict = bidict(uninfected_contact_type_dict)
 
     # Construct contact network
@@ -236,9 +236,9 @@ def generate_taiwan_infection_contact_network(data):
     contact_type_start_index = data.columns.get_loc('couple')
     contact_type_end_index = data.columns.get_loc('other_unknown_contact')
     uninfected_contact_type_start_index = data.columns.get_loc(
-        'number_of_uninfected_contact_travel')
+        'number_of_uninfected_contacts_travel')
     uninfected_contact_type_end_index = data.columns.get_loc(
-        'number_of_uninfected_contact_friend')
+        'number_of_uninfected_contacts_friend')
 
     # Construct contact type label
     contact_type_dict = {}
@@ -248,24 +248,24 @@ def generate_taiwan_infection_contact_network(data):
     contact_type_dict = bidict(contact_type_dict)
     contact_type_final_index = contact_type_dict['other_unknown_contact']
     # Add uninfected contact type
-    uninfected_contact_type_dict['number_of_uninfected_contact_travel'] = contact_type_dict['travel_together']
-    uninfected_contact_type_dict['number_of_uninfected_contact_flight'] = contact_type_dict['the_same_flight']
-    uninfected_contact_type_dict['number_of_uninfected_contact_flight_nearby_seats'] = contact_type_dict['the_same_flight_nearby_seat']
-    uninfected_contact_type_dict['number_of_uninfected_contact_car'] = contact_type_dict['the_same_car']
+    uninfected_contact_type_dict['number_of_uninfected_contacts_travel'] = contact_type_dict['travel_together']
+    uninfected_contact_type_dict['number_of_uninfected_contacts_flight'] = contact_type_dict['the_same_flight']
+    uninfected_contact_type_dict['number_of_uninfected_contacts_flight_nearby_seats'] = contact_type_dict['the_same_flight_nearby_seat']
+    uninfected_contact_type_dict['number_of_uninfected_contacts_car'] = contact_type_dict['the_same_car']
     # New label
-    uninfected_contact_type_dict['number_of_uninfected_contact_ship'] = contact_type_final_index + 1
+    uninfected_contact_type_dict['number_of_uninfected_contacts_ship'] = contact_type_final_index + 1
     contact_type_final_index += 1
-    uninfected_contact_type_dict['number_of_uninfected_contact_live_together'] = contact_type_dict['live_together']
-    uninfected_contact_type_dict['number_of_uninfected_contact_family'] = contact_type_dict['family']
-    uninfected_contact_type_dict['number_of_uninfected_contact_coworker'] = contact_type_dict['coworker']
-    uninfected_contact_type_dict['number_of_uninfected_contact_others'] = contact_type_dict['other_unknown_contact']
-    uninfected_contact_type_dict['number_of_uninfected_contact_hospital'] = contact_type_dict['the_same_hospital']
-    uninfected_contact_type_dict['number_of_uninfected_contact_quarantine_hotel'] = contact_type_dict['the_same_quarantine_hotel']
-    uninfected_contact_type_dict['number_of_uninfected_contact_hotel'] = contact_type_dict['the_same_hotel']
-    uninfected_contact_type_dict['number_of_uninfected_contact_school'] = contact_type_dict['the_same_school']
-    uninfected_contact_type_dict['number_of_uninfected_contact_couple'] = contact_type_dict['couple']
-    uninfected_contact_type_dict['number_of_uninfected_contact_panshi'] = contact_type_dict['panshi_fast_combat_support_ship']
-    uninfected_contact_type_dict['number_of_uninfected_contact_friend'] = contact_type_dict['friend']
+    uninfected_contact_type_dict['number_of_uninfected_contacts_live_together'] = contact_type_dict['live_together']
+    uninfected_contact_type_dict['number_of_uninfected_contacts_family'] = contact_type_dict['family']
+    uninfected_contact_type_dict['number_of_uninfected_contacts_coworker'] = contact_type_dict['coworker']
+    uninfected_contact_type_dict['number_of_uninfected_contacts_others'] = contact_type_dict['other_unknown_contact']
+    uninfected_contact_type_dict['number_of_uninfected_contacts_hospital'] = contact_type_dict['the_same_hospital']
+    uninfected_contact_type_dict['number_of_uninfected_contacts_quarantine_hotel'] = contact_type_dict['the_same_quarantine_hotel']
+    uninfected_contact_type_dict['number_of_uninfected_contacts_hotel'] = contact_type_dict['the_same_hotel']
+    uninfected_contact_type_dict['number_of_uninfected_contacts_school'] = contact_type_dict['the_same_school']
+    uninfected_contact_type_dict['number_of_uninfected_contacts_couple'] = contact_type_dict['couple']
+    uninfected_contact_type_dict['number_of_uninfected_contacts_panshi'] = contact_type_dict['panshi_fast_combat_support_ship']
+    uninfected_contact_type_dict['number_of_uninfected_contacts_friend'] = contact_type_dict['friend']
     uninfected_contact_type_dict = bidict(uninfected_contact_type_dict)
 
     # Construct contact network
